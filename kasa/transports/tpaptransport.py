@@ -1178,8 +1178,8 @@ class Authenticator:
 
     async def _establish_session(self) -> None:
         context_classes: list[type[NocAuthContext | Spake2pAuthContext]] = []
-        if self._tpap_noc:
-            context_classes.append(NocAuthContext)
+        #if self._tpap_noc:
+        #    context_classes.append(NocAuthContext)
         context_classes.append(Spake2pAuthContext)
         last_exc: Exception | None = None
         for ctx_cls in context_classes:
